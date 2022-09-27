@@ -1,0 +1,52 @@
+{% extends "base/layout.html" %}
+{% load static %}
+
+
+{% block content %} 
+<link rel="stylesheet" type="text/css" href="{% static 'css/home/home.css' %}" />
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+              
+            <form>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                <input type="button" id="btn-save" value="save">
+            </form>
+    
+    
+          </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table border="1" width="100%" class="table">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbl-user"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>    
+</div>    
+
+
+
+{% endblock %}
+
+{% block javascript %}
+    {{ block.super }}
+
+    <script src="{% static 'js/home/home.js' %}"></script>
+    
+{% endblock %}

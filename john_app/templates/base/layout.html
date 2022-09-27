@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}PYthon Batch One{% endblock %}</title>
+    {% block stylesheet %}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    {% endblock %}
+</head>
+<body>
+    <nav>
+		<a href="/">Home</a> |
+		{% comment %} <a href='{% url "about-us" %}'>About Us</a> | {% endcomment %}
+		<a href='/about'>About Us</a> |
+
+    </nav>   
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <p>Author: Hege Refsnes</p>
+        <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+	</footer>
+
+    {% block javascript %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+    
+    {% endblock %}
+
+
+</body>
+</html>
+    
+	

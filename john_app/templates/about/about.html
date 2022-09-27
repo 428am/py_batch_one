@@ -1,0 +1,13 @@
+{% extends "base/layout.html" %}
+{% load static %}
+
+{% block content %} 
+<h1>This is about us</h1>
+{% endblock %}
+
+{% block javascript %}
+    {{ block.super }}
+
+    <script src="{% static 'js/about/about.js' %}"></script>
+    
+{% endblock %}
